@@ -272,16 +272,7 @@ fun formatOneSML
               else printErr ("skipping " ^ hfp ^ "\n")
         )
   in
-    if not showPreview then
-      ()
-    else
-      ( TCS.print (boldc Palette.lightblue ("---- " ^ hfp ^ " ----"))
-      ; print "\n"
-      ; TCS.print prettied
-      ; print "\n"
-      ; TCS.print (boldc Palette.lightblue "--------")
-      ; print "\n"
-      );
+    if not showPreview then () else TCS.print prettied;
 
     if not doCheck then () else check ();
 
